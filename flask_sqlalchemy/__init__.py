@@ -807,10 +807,10 @@ class SQLAlchemy(object):
         app.config.setdefault('SQLALCHEMY_POOL_RECYCLE', None)
         app.config.setdefault('SQLALCHEMY_MAX_OVERFLOW', None)
         app.config.setdefault('SQLALCHEMY_COMMIT_ON_TEARDOWN', False)
-        track_modifications = app.config.setdefault('SQLALCHEMY_TRACK_MODIFICATIONS', True)
+        track_modifications = app.config.setdefault('SQLALCHEMY_TRACK_MODIFICATIONS', False)
 
         if track_modifications is None:
-            warnings.warn(FSADeprecationWarning('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning. This has been edited.’))
+            warnings.warn(FSADeprecationWarning('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.’))
 
         if not hasattr(app, 'extensions'):
             app.extensions = {}
