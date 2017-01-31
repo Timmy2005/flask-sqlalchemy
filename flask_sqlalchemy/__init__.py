@@ -810,7 +810,7 @@ class SQLAlchemy(object):
         track_modifications = app.config.setdefault('SQLALCHEMY_TRACK_MODIFICATIONS', False)
 
         if track_modifications is None:
-            warnings.warn(FSADeprecationWarning('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.’))
+            warnings.warn(FSADeprecationWarning('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.'))
 
         if not hasattr(app, 'extensions'):
             app.extensions = {}
